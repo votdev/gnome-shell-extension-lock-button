@@ -35,21 +35,20 @@ function ScreenSaver() {
 }
 
 function init() {
-	let me = this;
+    let me = this;
     me._system = Main.panel.statusArea['aggregateMenu']._system;
 }
 
 function enable() {
     let me = this;
-	// Create the button.
-	me._lockScreenAction = me._system._createActionButton(
-	  'changes-prevent-symbolic', _("Lock"));
-	me._lockScreenAction.connect('clicked', Lang.bind(
-	  me, me._onLockScreenClicked));
-	me._system._actionsItem.actor.add(me._lockScreenAction,
-	  { expand: true, x_fill: false });
-
-	// Show the lock-button if the menu is opened.
+    // Create the button.
+    me._lockScreenAction = me._system._createActionButton(
+      'changes-prevent-symbolic', _("Lock"));
+    me._lockScreenAction.connect('clicked', Lang.bind(
+      me, me._onLockScreenClicked));
+    me._system._actionsItem.actor.add(me._lockScreenAction,
+      { expand: true, x_fill: false });
+    // Show the lock-button if the menu is opened.
     me._system.menu.connect('open-state-changed', Lang.bind(
       me, function(menu, open) {
         if (!open)
@@ -60,10 +59,10 @@ function enable() {
 
 function disable() {
     let me = this;
-	if (me._lockScreenAction) {
-		me._system._actionsItem.actor.remove_child(me._lockScreenAction);
-		me._lockScreenAction = 0;
-	}
+    if (me._lockScreenAction) {
+        me._system._actionsItem.actor.remove_child(me._lockScreenAction);
+        me._lockScreenAction = 0;
+    }
 }
 
 function _onLockScreenClicked() {
