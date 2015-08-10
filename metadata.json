@@ -1,0 +1,10 @@
+{
+    "description": "Add lock icon to the panel and lock the screen.",
+    "name": "Lock button",
+    "shell-version": [
+        "3.16"
+    ],
+    "url": "https://github.com/votdev/gnome-shell-extension-lock-button",
+    "uuid": "lock-button@votdev-gmx.de",
+    "version": 1
+}
