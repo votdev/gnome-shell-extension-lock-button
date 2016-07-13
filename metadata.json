@@ -3,7 +3,8 @@
     "name": "Lock button",
     "shell-version": [
         "3.14",
-        "3.16"
+        "3.16",
+		"3.18"
     ],
     "url": "https://github.com/votdev/gnome-shell-extension-lock-button",
     "uuid": "lock-button@votdev-gmx.de",
